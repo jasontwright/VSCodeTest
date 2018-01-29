@@ -1,5 +1,3 @@
-// https://api.etherscan.io/api?module=account&action=balance&address=0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae&tag=latest&apikey=YourApiKeyToken'
-
 var balUrl = '';
 
 var ethAdd = '0xa5fefbf4cb73a13ec329c1b815b436b03da26adb';
@@ -9,3 +7,19 @@ var adaAdd = '';
 
 var apiKey = '';
 
+fetch(https://api.coinmarketcap.com/v1/ticker/?limit=10)
+    .then(
+        function(response) {
+            if (response.status !== 200) {
+                console.log('Looks like there was a problem. Status Code: ' + response.status);
+            return;
+            }
+
+            response.json().then(function(data) {
+                console.log(data);
+            })
+        }
+    )
+    .catch(function(err) {
+        console.log('Fetch error :-S', err);
+    });
